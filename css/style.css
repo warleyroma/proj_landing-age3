@@ -311,6 +311,11 @@ footer {
     animation: pulse 4.4s infinite ease-in-out;
 }
 
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
 @keyframes pulse {
     0% {
         transform: scale(1);

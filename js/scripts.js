@@ -39,12 +39,18 @@ window.addEventListener('scroll', function () {
 
 
 
-
 window.addEventListener("load", function () {
-    const preloader = document.getElementById("preloader");
-    setTimeout(() => {
-        preloader.classList.add("hidden");
-    }, 1200); // tempo mínimo de exibição
+
+    setTimeout(function () {
+
+        const preloader = document.getElementById("preloader");
+
+        if (preloader) {
+            preloader.classList.add("hidden");
+        }
+
+    }, 1200);
+
 });
 
 
