@@ -6,15 +6,29 @@ const cookieBanner = document.getElementById("cookie-banner");
 const acceptBtn = document.getElementById("accept-cookies");
 
 if (localStorage.getItem("cookiesAccepted")) {
-    cookieBanner.style.display = "none";
+
+    if (cookieBanner) {
+        cookieBanner.style.display = "none";
+    }
+
     cookiesAccepted = true;
 }
 
-acceptBtn.addEventListener("click", function () {
-    localStorage.setItem("cookiesAccepted", "true");
-    cookieBanner.style.display = "none";
-    cookiesAccepted = true;
-});
+if (acceptBtn) {
+
+    acceptBtn.addEventListener("click", function () {
+
+        localStorage.setItem("cookiesAccepted", "true");
+
+        if (cookieBanner) {
+            cookieBanner.style.display = "none";
+        }
+
+        cookiesAccepted = true;
+
+    });
+
+}
 
 
 
