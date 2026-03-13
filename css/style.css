@@ -1,0 +1,820 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================
+   CORES E BASE
+========================= */
+
+:root {
+    --gold: #D4AF37;
+    --black: #0B0B0B;
+    --dark: #111111;
+    --gray: #999;
+    --green: #68f07a;
+}
+
+body {
+    background-color: var(--black);
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 600;
+}
+
+.gold {
+    color: var(--gold);
+}
+
+section {
+    padding: 100px 0;
+    scroll-margin-top: 120px;
+}
+
+/* =========================
+   HERO BUTTONS PADRONIZADOS
+========================= */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.btn-hero {
+    min-width: 260px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-hero {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+
+.btn-gold {
+    background: var(--gold);
+    color: #000;
+    border: none;
+    padding: 12px 28px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn-gold:hover {
+    background: #b89545;
+    color: #000;
+}
+
+.btn-outline-gold {
+    border: 1px solid var(--gold);
+    color: var(--gold);
+}
+
+.btn-outline-gold:hover {
+    background: var(--gold);
+    color: #000;
+}
+
+.bg-dark-custom {
+    background: var(--dark);
+}
+
+.card-custom {
+    background: #151515;
+    border: 1px solid #222;
+    padding: 30px;
+    height: 100%;
+    transition: .3s;
+}
+
+.card-custom:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.icon-gold {
+    font-size: 32px;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.navbar {
+    padding: 6px 0;
+    /* diminui altura */
+    background-repeat: no-repeat;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--gold) !important;
+    letter-spacing: 2px;
+    padding: 10px 0px 0px 0px;
+}
+
+.logo-navbar {
+    height: 35px;
+    /* altura da navbar */
+    width: auto;
+    /* largura fixa */
+    display: block;
+}
+
+.nav-link {
+    color: #fff !important;
+    margin-left: 15px;
+    padding: 14px 0;
+}
+
+.nav-link:hover {
+    color: var(--gold) !important;
+}
+
+footer {
+    background: #000;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.hero {
+    min-height: 80vh;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom, #000, #0b0b0b);
+}
+
+@media (max-width:768px) {
+
+    .hero h1 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn-hero {
+        width: 100%;
+        max-width: 360px;
+        height: 58px;
+    }
+
+    .hero-buttons {
+        gap: 12px;
+    }
+
+    .maquininhas-full {
+        background-position: center;
+    }
+
+    .maquina-title {
+        font-size: 26px;
+    }
+
+    .maquina-subtitle {
+        font-size: 15px;
+    }
+
+    .card-custom {
+        padding: 24px;
+    }
+
+    .icon-gold {
+        font-size: 28px;
+    }
+
+    .cookie-floating {
+        font-size: 13px;
+        padding: 18px;
+    }
+
+
+    .map-full iframe {
+        height: 200px;
+    }
+
+}
+
+/* Isso faz a seção "respirar" e parar no lugar certo */
+#o-que-faz {
+    scroll-margin-top: 20px;
+    /* Ajuste esse valor se a navbar for muito alta */
+    padding-top: 120px !important;
+    padding-bottom: 120px !important;
+}
+
+/* Garante que o container interno não tenha margens negativas que "puxem" a seção */
+#o-que-faz .container {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 991px) {
+
+    .navbar-collapse {
+        background: var(--black);
+        padding: 15px;
+        border-top: 1px solid #222;
+        transition: all .3s ease;
+
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .nav-link {
+        padding: 12px 0;
+    }
+
+    .tax-box {
+        display: block;
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto 20px auto;
+        text-align: center;
+    }
+
+    .maquina-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .maquina-buttons a {
+        width: 100%;
+        max-width: 360px;
+    }
+}
+
+.divider {
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    margin: 20px auto;
+}
+
+.social-icon {
+    font-size: 28px;
+    color: var(--gold);
+    margin: 0 15px;
+    transition: .3s;
+}
+
+.social-icon:hover {
+    color: #fff;
+}
+
+
+/* PRELOADER */
+
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.preloader-logo {
+    width: 200px;
+    animation: pulse 4.4s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.map-full {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.img-sobre {
+    height: 80px;
+    width: auto;
+}
+
+
+.map-full iframe {
+    width: 100%;
+    height: 250px;
+    border: 0;
+    display: block;
+}
+
+.contact-card {
+    background: #151515;
+    padding: 40px 25px;
+    border: 1px solid #222;
+    transition: .3s;
+    height: 100%;
+}
+
+.contact-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.contact-card h5 {
+    font-weight: 600;
+}
+
+.contact-card p {
+    color: var(--gray);
+    margin: 0;
+}
+
+
+.footer-custom {
+    background: #000;
+    padding: 80px 0 40px;
+}
+
+.footer-title {
+    color: var(--gold);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-text {
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: var(--gray);
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+.footer-social a {
+    font-size: 20px;
+    margin-right: 15px;
+    color: var(--gold);
+    transition: .3s;
+}
+
+.footer-social a:hover {
+    color: #fff;
+}
+
+.footer-divider {
+    border-color: #222;
+    margin: 40px 0;
+}
+
+.footer-bottom {
+    color: var(--gray);
+}
+
+.logo-footer{
+    height:45px;
+}
+
+/* ==============================
+   MAQUININHA - CONVERSÃO PREMIUM
+============================== */
+
+.maquininhas-section-3d {
+    background: radial-gradient(circle at top, #111 0%, #000 60%);
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.gold-wave {
+    position: absolute;
+    top: 65%;
+    left: 0;
+    width: 110%;
+    height: 250px;
+    opacity: 0.8;
+    z-index: 0;
+    transform: translateY(-50%);
+}
+
+.maquininhas-section-3d .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+.tax-title {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #bbb;
+}
+
+.tax-value {
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--gold);
+}
+
+.tax-desc {
+    font-size: 13px;
+    color: #ccc;
+}
+
+.tax-container {
+    display: flex;
+    gap: 9px;
+    flex-wrap: wrap;
+}
+
+.maquina-selos {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.selo {
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 30px;
+    color: #f5e7a3;
+    font-weight: 600;
+}
+
+.tax-box {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    padding: 10px 12px;
+    border-radius: 12px;
+    margin: auto
+}
+
+.tax-label {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #aaa;
+}
+
+.tax-number {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+}
+
+.tax-small {
+    font-size: 13px;
+    color: #ccc;
+}
+
+
+.beneficios-taxas {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tax-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(212, 175, 55, 0.5);
+    margin: 10px 0;
+}
+
+.maquina-buttons {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.btn-whatsapp {
+    color: var(--black);
+    border-radius: 15px;
+    text-decoration: none;
+    transition: opacity .4s ease, transform .4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 130px;
+    height: 50px;
+    background: var(--green);
+    z-index: 9999;
+    animation: fadeInUp 2s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.btn-whatsapp:hover {
+    background: var(--gold);
+    color: #000;
+}
+
+.bi-whatsapp::before {
+    margin-right: 8px;
+    font-size: 28px;
+}
+
+.btn-whatsapp.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+
+}
+
+.whatsapp-text {
+    line-height: 1.1;
+    text-align: left;
+    font-size: 16px;
+}
+
+
+/* =========================
+   COOKIE FLOATING PREMIUM
+========================= */
+
+.cookie-floating {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 360px;
+    background: #151515;
+    border: 1px solid #222;
+    border-radius: 16px;
+    padding: 22px 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    animation: fadeInUp 0.6s ease;
+}
+
+.cookie-floating p {
+    font-size: 14px;
+    color: #ccc;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.cookie-link {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.cookie-link:hover {
+    text-decoration: underline;
+}
+
+/* Animação */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .cookie-floating {
+        right: 15px;
+        left: 15px;
+        bottom: 20px;
+        width: auto;
+    }
+}
+
+/* ==============================
+   SECTION MAQUININHAS PREMIUM
+============================== */
+
+.maquininhas-full {
+    background-image: url('../img/maquina.png');
+    background-size: cover;
+    background-position: 85% 15%;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+    /*padding: 25px 0;*/
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Overlay escuro elegante */
+.maquininhas-full::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            rgba(0, 0, 0, 0.85) 08%,
+            rgba(0, 0, 0, 0.75) 22%,
+            rgba(0, 0, 0, 0.4) 45%,
+            rgba(0, 0, 0, 0.1) 57%);
+}
+
+/* Conteúdo acima do overlay */
+.maquina-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 30px 40px 0px 0px;
+}
+
+
+/* Título Impactante */
+.maquina-title {
+    font-size: 46px;
+    font-weight: 350;
+    line-height: 1.2;
+}
+
+.maquina-title strong {
+    color: var(--gold);
+}
+
+/* Subtítulo */
+.maquina-subtitle {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 520px;
+}
+
+/* Lista */
+.maquininha-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.maquininha-list li {
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #fffbe7;
+}
+
+.maquininha-list i {
+    color: #ecda8b;
+    margin-right: 8px;
+}
+
+/* Botão chamativo */
+.btn-maquina {
+    background: linear-gradient(45deg, #dfd186, #F5C542);
+    color: #000;
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    display: inline-block;
+    width: 50%;
+}
+
+.btn-maquina:hover {
+    color: #36352e;
+    background: linear-gradient(30deg, #ffec83, #ffe397);
+    transform: translateY(5px);
+    box-shadow: 0 15px 10px rgba(300, 300, 0, 0.4);
+}
+
+/* Responsivo */
+@media (max-width: 1080px) {
+    .maquina-title {
+        font-size: 34px;
+    }
+
+    .maquininhas-full {
+        padding: 65px 0;
+        background-size: cover;
+        background-position: 85% center;
+        background-repeat: no-repeat;
+        position: relative;
+        color: #fff;
+    }
+
+
+    /* Overlay escuro elegante */
+    .maquininhas-full::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg,
+                rgba(0, 0, 0, 0.85) 25%,
+                rgba(0, 0, 0, 0.75) 35%,
+                rgba(0, 0, 0, 0.4) 95%,
+                rgba(0, 0, 0, 0.1) 120%);
+    }
+
+    .maquina-content {
+        padding: 10px 20px 20px 20px;
+    }
+
+    .selo {
+        font-size: 10px;
+    }
+
+    .beneficios-taxas {
+        gap: 0;
+    }
+
+    .btn-maquina {
+        width: 100%;
+    }
+
+}
+
+@media (max-width:1199px) and (min-width:992px) {
+
+    .beneficios-taxas {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .tax-box {
+        margin: 0;
+    }
+
+    .btn-maquina {
+        width: 100%;
+    }
+
+    .maquina-buttons {
+        margin: 12px 0 0 0;
+    }
+
+}
