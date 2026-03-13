@@ -16,9 +16,13 @@ html {
 }
 
 body {
-    background-color: var(--black);
-    color: var(--white);
-    font-family: 'Segoe UI', sans-serif;
+background-color: var(--black);
+color: var(--white);
+font-family: 'Segoe UI', sans-serif;
+}
+
+p, li, span {
+color: inherit;
 }
 
 
@@ -332,11 +336,6 @@ footer {
         transform: scale(1);
         opacity: 0.8;
     }
-}
-
-#preloader.hidden {
-    opacity: 0;
-    visibility: hidden;
 }
 
 .map-full {
