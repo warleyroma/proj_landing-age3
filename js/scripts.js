@@ -1,36 +1,51 @@
 /* SCRIPT DOS COOKIES */
 
-let cookiesAccepted = false;
+let cookiesAccepted = localStorage.getItem("cookiesAccepted") === "true";
 
-const cookieBanner = document.getElementById("cookie-banner");
-const acceptBtn = document.getElementById("accept-cookies");
+function initCookieBanner() {
+    const cookieBanner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("accept-cookies");
 
-if (localStorage.getItem("cookiesAccepted")) {
-
-    if (cookieBanner) {
-        cookieBanner.style.display = "none";
+    if (!cookieBanner || !acceptBtn) {
+        return false;
     }
 
-    cookiesAccepted = true;
-}
+    if (cookiesAccepted) {
+        cookieBanner.style.display = "none";
+        return true;
+    }
 
-if (acceptBtn) {
+    if (localStorage.getItem("cookiesAccepted")) {
+        cookiesAccepted = true;
+        cookieBanner.style.display = "none";
+        return true;
+    }
 
     acceptBtn.addEventListener("click", function () {
-
         localStorage.setItem("cookiesAccepted", "true");
-
-        if (cookieBanner) {
-            cookieBanner.style.display = "none";
-        }
-
         cookiesAccepted = true;
-
+        cookieBanner.style.display = "none";
     });
 
+    return true;
 }
 
+function waitForCookieBanner(retries = 30) {
+    if (initCookieBanner()) {
+        return;
+    }
+    if (retries <= 0) {
+        console.warn("Cookie banner elements not found after retries.");
+        return;
+    }
+    setTimeout(function () {
+        waitForCookieBanner(retries - 1);
+    }, 100);
+}
 
+window.addEventListener("load", function () {
+    waitForCookieBanner();
+});
 
 
 /*SCRIPT DO BOTÃO WHATSAPP */
