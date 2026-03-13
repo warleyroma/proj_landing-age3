@@ -12,11 +12,12 @@ html {
     --dark: #111111;
     --gray: #999;
     --green: #68f07a;
+    --white: #ffffff;
 }
 
 body {
     background-color: var(--black);
-    color: #fff;
+    color: var(--white);
     font-family: 'Segoe UI', sans-serif;
 }
 
