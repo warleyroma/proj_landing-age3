@@ -336,7 +336,8 @@
 
         <div class="store-buttons">
 
-            <a href="https://play.google.com/store/apps/details?id=app.shalomfinance.sharub3x&pcampaignid=web_share"
+            <a href="https://play.google.com/store/apps/details?id=app.shalomfinance.sharub3x"
+		onclick="if(/Android/i.test(navigator.userAgent)) this.href='market://details?id=app.shalomfinance.sharub3x';"
                 target="_blank"
                 rel="noopener"
                 aria-label="Baixar no Google Play">
@@ -348,6 +349,7 @@
             </a>
 
             <a href="https://apps.apple.com/br/app/shalom-finance/id6769845644"
+		onclick="if(/iPhone|iPad|iPod/i.test(navigator.userAgent)) this.href='itms-apps://apps.apple.com/br/app/shalom-finance/id6769845644';"
                 target="_blank"
                 rel="noopener"
                 aria-label="Baixar na App Store">
