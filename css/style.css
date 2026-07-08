@@ -758,8 +758,148 @@ footer {
     transform: translateY(5px);
     box-shadow: 0 15x 10px rgba(300, 300, 0, 0.4);
 }
+/* ============================
+   DOWNLOAD APP FULLSCREEN
+============================ */
 
-/* Responsivo */
+#download-app {
+    min-height: 100vh;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    background:
+        radial-gradient(circle at center,
+        #1b1b1b 0%,
+        #111 45%,
+        #0b0b0b 100%);
+
+    scroll-margin-top: 90px;
+}
+
+
+#download-app .container {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    max-width:900px;
+}
+
+
+#download-app h2 {
+    font-size:clamp(32px,4vw,48px);
+    margin-bottom:20px;
+}
+
+
+.download-text {
+    max-width:700px;
+    font-size:clamp(16px,2vw,20px);
+    line-height:1.7;
+    color:#ccc;
+    margin-bottom:45px;
+}
+
+
+/* BOTÕES DAS LOJAS */
+
+.store-buttons {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+}
+
+
+.store-buttons a {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
+    transition:.3s ease;
+}
+
+
+.store-buttons a:hover {
+    transform:translateY(-5px);
+}
+
+
+.store-badge {
+    width:auto;
+    height:55px;
+}
+
+
+.google-badge {
+    height:50px;
+}
+
+
+.apple-badge {
+    height:55px;
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    #download-app {
+
+        min-height:100svh;
+        height:100svh;
+
+        padding:30px 20px;
+
+    }
+
+
+    #download-app h2 {
+
+        font-size:30px;
+        line-height:1.2;
+
+    }
+
+
+    .download-text {
+
+        font-size:16px;
+        margin-bottom:35px;
+
+    }
+
+
+    .store-buttons {
+
+        flex-direction:column;
+        gap:18px;
+
+    }
+
+
+    .google-badge {
+
+        height:48px;
+
+    }
+
+
+    .apple-badge {
+
+        height:52px;
+
+    }
+
+}/* Responsivo */
 @media (max-width: 1080px) {
     .maquina-title {
         font-size: 34px;
